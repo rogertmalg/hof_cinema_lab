@@ -10,17 +10,17 @@ Cinema.prototype.getTitles = function () {
 }
 
 Cinema.prototype.filmTitle = function (title) {
-  const result = this.films.find(film => film.title == title);
+  const result = this.films.find(film => film.title === title);
   return result;
 }
 
 Cinema.prototype.filmsByGenre = function (genre) {
-  const result = this.films.filter(film => film.genre == genre);
+  const result = this.films.filter(film => film.genre === genre);
   return result;
 }
 
 Cinema.prototype.areFilmsFromYear = function (year) {
-  return this.films.some(film => film.year == year);
+  return this.films.some(film => film.year === year);
 }
 
 Cinema.prototype.arentFilmsFromYear = function (year) {
@@ -37,7 +37,7 @@ Cinema.prototype.totalRunningTime = function () {
 
 Cinema.prototype.filmsByProperty = function (property, value) {
   
-  const result = this.films.filter(film => film[property] == value);
+  const result = this.films.filter(film => film[property] === value);
   return result;
 }
 
